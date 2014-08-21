@@ -16,8 +16,9 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastTextField: UITextField!
     
-    @IBOutlet weak var viewImage: UIImageView!
+   // @IBOutlet weak var viewImage: UIImageView!
     
+    @IBOutlet weak var viewImage: UIImageView!
     @IBOutlet weak var firstTextField: UILabel!
     @IBOutlet weak var lastText: UILabel!
     
@@ -28,11 +29,14 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
         super.viewDidLoad()
         //self.firstNameTextField.delegate = self
        // self.lastTextField.delegate = self
-        
-        var yikbbrkiE = UIImage(named: "stick")
-        self.viewImage.image = yikbbrkiE
-        
-      
+        //self.viewImage.image = selectedPerson?.image
+        if self.selectedPerson!.image != nil{
+            self.viewImage.image = selectedPerson?.image
+        }else{
+            var yikbbrkiE = UIImage(named: "yikbbrkiE")
+            self.viewImage.image = yikbbrkiE
+        }
+       
     }
     //just checking :)
     override func viewWillLayoutSubviews() {
@@ -82,6 +86,7 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
         println("user picked a photo")
         var editedImage = info[UIImagePickerControllerOriginalImage] as UIImage
         self.viewImage.image = editedImage
+        self.selectedPerson!.image = editedImage
     }
     
    func imagePickerControllerDidCancel(picker: UIImagePickerController!) {

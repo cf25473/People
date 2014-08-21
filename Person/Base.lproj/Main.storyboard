@@ -60,6 +60,7 @@
         <!--Detail View Controller-->
         <scene sceneID="a8J-AV-LdN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tj1-a1-dw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yPl-PJ-vD0" customClass="detailViewController" customModule="Person" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EGN-Kj-2qN"/>
@@ -114,10 +115,10 @@
                                     <rect key="frame" x="33" y="482" width="127" height="21"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yikbbrkiE.png" translatesAutoresizingMaskIntoConstraints="NO" id="K3Y-n5-XQ9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yikbbrkiE.png" translatesAutoresizingMaskIntoConstraints="NO" id="lDn-QY-sVI">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="87" y="106" width="273" height="247"/>
+                                    <rect key="frame" x="98" y="154" width="240" height="128"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -129,7 +130,7 @@
                                 <exclude reference="H6C-xJ-Wto"/>
                                 <exclude reference="Rxf-ZH-vlT"/>
                                 <exclude reference="jZA-DH-pHY"/>
-                                <exclude reference="K3Y-n5-XQ9"/>
+                                <exclude reference="lDn-QY-sVI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -139,7 +140,7 @@
                                 <include reference="H6C-xJ-Wto"/>
                                 <include reference="Rxf-ZH-vlT"/>
                                 <include reference="jZA-DH-pHY"/>
-                                <include reference="K3Y-n5-XQ9"/>
+                                <include reference="lDn-QY-sVI"/>
                             </mask>
                         </variation>
                     </view>
@@ -148,10 +149,9 @@
                         <outlet property="firstTextField" destination="Rxf-ZH-vlT" id="bMz-jN-vD3"/>
                         <outlet property="lastText" destination="jZA-DH-pHY" id="xVy-ai-9Ik"/>
                         <outlet property="lastTextField" destination="ZZV-h1-ASJ" id="Qo4-CK-Puy"/>
-                        <outlet property="viewImage" destination="K3Y-n5-XQ9" id="hVo-Vq-791"/>
+                        <outlet property="viewImage" destination="lDn-QY-sVI" id="Uvy-XY-0vY"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tj1-a1-dw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1894.5" y="138.75"/>
         </scene>
