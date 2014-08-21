@@ -34,6 +34,7 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
       
     }
+    //just checking :)
     override func viewWillLayoutSubviews() {
         println("will layoutSubviews")
     }
