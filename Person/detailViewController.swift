@@ -8,7 +8,8 @@
 
 import UIKit
 
-class detailViewController: UIViewController,  UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class detailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
+{
 
    
     
@@ -21,12 +22,12 @@ class detailViewController: UIViewController,  UITextFieldDelegate, UIImagePicke
     @IBOutlet weak var lastText: UILabel!
     
     var selectedPerson : Person?
-    var firstLoad = true
+   var firstLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstNameTextField.delegate = self
-        self.lastTextField.delegate = self
+        //self.firstNameTextField.delegate = self
+       // self.lastTextField.delegate = self
         
         var yikbbrkiE = UIImage(named: "stick")
         self.viewImage.image = yikbbrkiE
@@ -36,16 +37,17 @@ class detailViewController: UIViewController,  UITextFieldDelegate, UIImagePicke
     override func viewWillLayoutSubviews() {
         println("will layoutSubviews")
     }
-        override func viewWillAppear(animated: Bool) {
-        //super.viewWillAppear(animated)
-       //self.firstTextField.text = selectedPerson?.firstName
-        //self.lastText.text = selectedPerson?.lastName
-        
-        
-        
-        if self.firstLoad == true {
-            self.firstLoad = false
-        }
+    
+    override func viewWillAppear(animaOted: Bool) {
+    //super.viewWillAppear(animated)
+   self.firstTextField.text = selectedPerson?.firstName
+    self.lastText.text = selectedPerson?.lastName
+    
+    
+    
+    if self.firstLoad == true {
+        self.firstLoad = false
+    }
         println("view will appear")
     }
 

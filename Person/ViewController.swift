@@ -18,9 +18,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
         override func viewDidLoad() {
+            super.viewDidLoad()
             self.people = self.createPeople()
             self.teacher = self.createTeacher()
-            super.viewDidLoad()
+            
             self.tableView.dataSource = self
             self.tableView.delegate = self
             togetherArr = [people , teacher]
@@ -58,14 +59,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        
          people = [christie, nate, matt, jeff, david, adrian, jake, tony, shams, cameron, kori, parker, nathan, casey, brendan, brian, mark, rowan, lance, kevin, will, Heather, tuan, zack, sarah, hongyao]
         
+        
         return people
     }
-        func createTeacher () ->[Person]{
-            var brad = Person(firstName: "Brad", lastName: "Johnson")
-            var john = Person(firstName: "John", lastName: "Clem")
-            teacher = [brad, john]
-           
-            return teacher
+    func createTeacher () ->[Person]{
+        var brad = Person(firstName: "Brad", lastName: "Johnson")
+        var john = Person(firstName: "John", lastName: "Clem")
+        teacher = [brad, john]
+       
+        return teacher
 
     }
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
@@ -87,16 +89,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
     return self.togetherArr.count
     }
-        func tableView(tableView: UITableView, titleForHeaderInSection section: Int) ->String{
-            return typeArr[section]
-        }
-            func tableView(tableView: UITableView!, didDeselectRowAtIndexPath indexPath: NSIndexPath!){
-            println(indexPath.item)
-            }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) ->String{
+        return typeArr[section]
+    }
+    
+    func tableView(tableView: UITableView!, didDeselectRowAtIndexPath indexPath: NSIndexPath!){
+    println(indexPath.item)
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
     
-        if segue.identifier == "showPerson"{
+        if segue.identifier == "ShowPerson"{
             var detailVC = segue.destinationViewController as detailViewController
             var selectedPeep = self.people[self.tableView.indexPathForSelectedRow().row]
             detailVC.selectedPerson = selectedPeep

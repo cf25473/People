@@ -32,7 +32,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -145,7 +145,6 @@
                     </view>
                     <connections>
                         <outlet property="firstNameTextField" destination="GON-Rb-sLE" id="rOv-fR-9LV"/>
-                        <outlet property="firstText" destination="Rxf-ZH-vlT" id="zI4-U1-6Ab"/>
                         <outlet property="firstTextField" destination="Rxf-ZH-vlT" id="bMz-jN-vD3"/>
                         <outlet property="lastText" destination="jZA-DH-pHY" id="xVy-ai-9Ik"/>
                         <outlet property="lastTextField" destination="ZZV-h1-ASJ" id="Qo4-CK-Puy"/>
