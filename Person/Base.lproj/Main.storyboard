@@ -68,30 +68,88 @@
                     <view key="view" contentMode="scaleToFill" id="6Gv-xL-ExN">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZm-H2-bM3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GON-Rb-sLE">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="238" y="435" width="122" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZV-h1-ASJ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="238" y="473" width="122" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6C-xJ-Wto">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Change Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="385" width="122" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="photoButtonPressed:" destination="yPl-PJ-vD0" eventType="touchUpInside" id="sxf-nz-wgK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxf-ZH-vlT">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="338" width="368" height="118"/>
+                                    <rect key="frame" x="33" y="444" width="102" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZA-DH-pHY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="482" width="127" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yikbbrkiE.png" translatesAutoresizingMaskIntoConstraints="NO" id="K3Y-n5-XQ9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="87" y="106" width="273" height="247"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="rZm-H2-bM3"/>
+                                <exclude reference="GON-Rb-sLE"/>
+                                <exclude reference="ZZV-h1-ASJ"/>
+                                <exclude reference="H6C-xJ-Wto"/>
+                                <exclude reference="Rxf-ZH-vlT"/>
+                                <exclude reference="jZA-DH-pHY"/>
+                                <exclude reference="K3Y-n5-XQ9"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="rZm-H2-bM3"/>
+                                <include reference="GON-Rb-sLE"/>
+                                <include reference="ZZV-h1-ASJ"/>
+                                <include reference="H6C-xJ-Wto"/>
+                                <include reference="Rxf-ZH-vlT"/>
+                                <include reference="jZA-DH-pHY"/>
+                                <include reference="K3Y-n5-XQ9"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="label" destination="rZm-H2-bM3" id="tNN-pz-yQv"/>
+                        <outlet property="firstNameTextField" destination="GON-Rb-sLE" id="rOv-fR-9LV"/>
+                        <outlet property="firstText" destination="Rxf-ZH-vlT" id="zI4-U1-6Ab"/>
+                        <outlet property="firstTextField" destination="Rxf-ZH-vlT" id="bMz-jN-vD3"/>
+                        <outlet property="lastText" destination="jZA-DH-pHY" id="xVy-ai-9Ik"/>
+                        <outlet property="lastTextField" destination="ZZV-h1-ASJ" id="Qo4-CK-Puy"/>
+                        <outlet property="viewImage" destination="K3Y-n5-XQ9" id="hVo-Vq-791"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tj1-a1-dw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,4 +175,7 @@
             <point key="canvasLocation" x="126" y="129.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="yikbbrkiE.png" width="800" height="600"/>
+    </resources>
 </document>

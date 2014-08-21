@@ -14,6 +14,7 @@
 		2C3A20BF199C61B70092AFB9 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A20BE199C61B70092AFB9 /* PersonTests.swift */; };
 		2C3A20C9199C61C80092AFB9 /* person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A20C8199C61C80092AFB9 /* person.swift */; };
 		2C3A20CB199C6E230092AFB9 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A20CA199C6E230092AFB9 /* detailViewController.swift */; };
+		2C3A212719A554EB0092AFB9 /* yikbbrkiE.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A212619A554EB0092AFB9 /* yikbbrkiE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2C3A20BE199C61B70092AFB9 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		2C3A20C8199C61C80092AFB9 /* person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = person.swift; path = ../person.swift; sourceTree = "<group>"; };
 		2C3A20CA199C6E230092AFB9 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		2C3A212619A554EB0092AFB9 /* yikbbrkiE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yikbbrkiE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				2C3A20AF199C61B70092AFB9 /* Main.storyboard */,
 				2C3A20C8199C61C80092AFB9 /* person.swift */,
 				2C3A20CA199C6E230092AFB9 /* detailViewController.swift */,
+				2C3A212619A554EB0092AFB9 /* yikbbrkiE.png */,
 				2C3A20B2199C61B70092AFB9 /* Images.xcassets */,
 				2C3A20A9199C61B70092AFB9 /* Supporting Files */,
 			);
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3A212719A554EB0092AFB9 /* yikbbrkiE.png in Resources */,
 				2C3A20B1199C61B70092AFB9 /* Main.storyboard in Resources */,
 				2C3A20B3199C61B70092AFB9 /* Images.xcassets in Resources */,
 			);

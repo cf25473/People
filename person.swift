@@ -21,5 +21,5 @@ class Person: NSObject {
     }
     func fullName() -> String{
         return self.firstName + " " + self.lastName
-    }
+  }
 }
