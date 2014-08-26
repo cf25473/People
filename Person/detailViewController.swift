@@ -11,12 +11,6 @@ import UIKit
 class detailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
 
-   
-    
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastTextField: UITextField!
-    
-   // @IBOutlet weak var viewImage: UIImageView!
     
     @IBOutlet weak var viewImage: UIImageView!
     @IBOutlet weak var firstTextField: UILabel!
@@ -27,9 +21,10 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.firstNameTextField.delegate = self
-       // self.lastTextField.delegate = self
-        //self.viewImage.image = selectedPerson?.image
+        let standardDefaults = NSUserDefaults.standardUserDefaults()
+        if let buttonTitle = standardDefaults.stringForKey("buttonTitle"){
+            println("button title: \(buttonTitle)")
+        }
         if self.selectedPerson!.image != nil{
             self.viewImage.image = selectedPerson?.image
         }else{
@@ -38,13 +33,18 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
        
     }
-    //just checking :)
     override func viewWillLayoutSubviews() {
-        println("will layoutSubviews")
+       // println("will layoutSubviews")
     }
     
-    override func viewWillAppear(animaOted: Bool) {
-    //super.viewWillAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+        
+//        standardDefaults.registeredDefaults(["buttonTitle"])
+//        standardDefaults.setObject("Fancy Button Title", forkey: "buttonTitle")
+//        standardDefaults.synchronize()
+
+    
    self.firstTextField.text = selectedPerson?.firstName
     self.lastText.text = selectedPerson?.lastName
     
@@ -94,3 +94,4 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
 
 }
+

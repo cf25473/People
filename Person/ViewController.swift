@@ -13,23 +13,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var teacher = [Person]()
     var typeArr = ["Students", "Teachers"]
     var togetherArr = [[Person]]()
+    var filePath: String?
+    var fileName = "personList.plist"
+    
         // Do any additional setup after loading the view, typically from a nib.
     
     @IBOutlet weak var tableView: UITableView!
     
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.tableView.dataSource = self
+            self.tableView.delegate = self
+            
             self.people = self.createPeople()
             self.teacher = self.createTeacher()
             
-            self.tableView.dataSource = self
-            self.tableView.delegate = self
+
             togetherArr = [people , teacher]
+   
+        //self.getPath("Monday")
     }
+    
+    func getPath (fileName: String) ->String {
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentDirectory = path[0] as String
+        let secretFile = documentDirectory.stringByAppendingString(fileName)
+        return secretFile
+        //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentsDirectory, .UserDomainMask, true)[0] as String
+    }
+    func checkFile (path: String)-> Bool{
+         let manager = NSFileManager.defaultManager()
+        if (manager.fileExistsAtPath(path)){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+
+func saveMyFile (objectSaver: AnyObject, fileName: String){
+    if NSKeyedArchiver.archiveRootObject(objectSaver, toFile: fileName){
+        println("made it")
+        
+    }
+    else{
+        println("failed")
+    }
+    
+}
 
     
     func createPeople() -> [Person] {
-       
+        
         var christie = Person(firstName: "Christie", lastName: "Ferderer")
         var nate = Person (firstName: "Nate", lastName: "Birkholz")
         var matt = Person (firstName: "Matthew", lastName: "Brightbill")
