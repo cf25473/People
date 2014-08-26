@@ -17,7 +17,7 @@ class Person: NSObject, NSCoding{
 
 
     init (firstName : String, lastName : String){
-        //super.init()
+        
         self.firstName = firstName
         self.lastName = lastName
         super.init()
@@ -33,7 +33,7 @@ class Person: NSObject, NSCoding{
     }
 
     required init(coder aDecoder: NSCoder!){
-        //super.init()
+        
         firstName = aDecoder.decodeObjectForKey("firstName") as String
         lastName = aDecoder.decodeObjectForKey("lastName") as String
         //image = aDecoder.decodeObjectForKey("image") as UIImage?
