@@ -13,18 +13,20 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     
     @IBOutlet weak var viewImage: UIImageView!
-    @IBOutlet weak var firstTextField: UILabel!
-    @IBOutlet weak var lastText: UILabel!
+    @IBOutlet weak var fNameField: UITextField!
+    @IBOutlet weak var lNameField: UITextField!
+    @IBOutlet weak var gitHubNameField: UITextField!
     
     var selectedPerson : Person?
    var firstLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let standardDefaults = NSUserDefaults.standardUserDefaults()
-        if let buttonTitle = standardDefaults.stringForKey("buttonTitle"){
-            println("button title: \(buttonTitle)")
-        }
+        
+        self.fNameField.delegate = self
+        self.lNameField.delegate = self
+        self.gitHubNameField.delegate = self
+    
         if self.selectedPerson!.image != nil{
             self.viewImage.image = selectedPerson?.image
         }else{
@@ -38,15 +40,11 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-        
-//        standardDefaults.registeredDefaults(["buttonTitle"])
-//        standardDefaults.setObject("Fancy Button Title", forkey: "buttonTitle")
-//        standardDefaults.synchronize()
-
+    //super.viewWillAppear(animated)
     
-   self.firstTextField.text = selectedPerson?.firstName
-    self.lastText.text = selectedPerson?.lastName
+    self.fNameField.text = self.selectedPerson?.firstName
+    self.lNameField.text = selectedPerson?.lastName
+    
     
     
     
@@ -54,6 +52,12 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.firstLoad = false
     }
         println("view will appear")
+    }
+    func textFieldDidEndEditing(textField: UITextField!) {
+        self.selectedPerson?.firstName = self.fNameField.text
+        self.selectedPerson?.lastName = self.lNameField.text
+        println(textField.text)
+
     }
 
     override func viewWillDisappear(animated: Bool) {
@@ -70,9 +74,7 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
         return true
         
     }
-    func textFieldDidEndEditing(textField: UITextField!) {
-        println(textField.text)
-    }
+    
     @IBAction func photoButtonPressed(sender: AnyObject) {
         var imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
