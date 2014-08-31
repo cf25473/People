@@ -15,9 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var togetherArr = [[Person]]()
     var filePath: String?
     var fileName = "personList.plist"
-    
-        // Do any additional setup after loading the view, typically from a nib.
-    
+ 
     @IBOutlet weak var tableView: UITableView!
     
         override func viewDidLoad() {

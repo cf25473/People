@@ -14,6 +14,7 @@ class Person: NSObject, NSCoding{
     var firstName : String
     var lastName : String
     var image : UIImage?
+    var gitHubName : String?
 
 
     init (firstName : String, lastName : String){
