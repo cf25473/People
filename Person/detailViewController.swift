@@ -142,7 +142,7 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.viewImage.image = picImage as UIImage
                     self.selectedPerson?.image = picImage as UIImage
                     
-        
+        //
             })
         }
                 //self.imageDownloadQueue.addOperation(downloadOperation)
